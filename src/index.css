@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-black: #0F0F0F;
+  --color-brand-dark: #151515;
+  --color-brand-card: #1A1A1A;
+  --color-brand-accent: #8B5E3C;
+  --color-brand-accent-light: #C4A484;
+  --color-brand-text: #F5F5F0;
+  --color-brand-border: #333333;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-brand-text font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight leading-tight;
+  }
+}
+
+.menu-dotted-line {
+  @apply flex-grow border-b border-dotted border-stone-800 mx-2 mb-1;
+}
+
+.header-nav-link {
+  @apply text-[10px] uppercase tracking-[0.2em] font-medium opacity-60 hover:opacity-100 hover:text-brand-accent transition-all;
+}
+
+.action-button {
+  @apply px-6 py-2 bg-brand-accent text-brand-black font-bold text-xs uppercase tracking-tighter hover:bg-brand-accent-light transition-all;
+}
